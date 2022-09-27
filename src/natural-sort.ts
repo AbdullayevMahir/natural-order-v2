@@ -97,7 +97,7 @@ const naturalSort = (opts?: IOptions) => {
 
       // handle numeric vs string comparison - number < string - (Kyle Adams)
       if (isNaN(oFxNcL as any) !== isNaN(oFyNcL as any))
-        return isNaN(oFxNcL as any) ? GREATER : SMALLER;
+        return isNaN(oFxNcL as any) ? SMALLER : GREATER;
       // rely on string comparison if different types - i.e. '02' < 2 != '02' < '2'
       else if (typeof oFxNcL !== typeof oFyNcL) {
         oFxNcL += "";
